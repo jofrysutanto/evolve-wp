@@ -1,0 +1,6 @@
+.float-none-sm {
+    @media (max-width: $screen-sm-max) {
+        float: none !important;
+        text-align: center;
+    }
+}
