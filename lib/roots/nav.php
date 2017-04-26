@@ -24,30 +24,9 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     $post_id = $item->object_id; // This is our page/post id
     parent::start_el($item_html, $item, $depth, $args);
 
-    /**
-     * Appending caret to mega menu
-     */
-    $mega = \Main::getMegaMenu();
-    $isMega = array_get($mega, $item->ID . '.is_project', false);
-
-    /**
-     * Appending title AND description to each menu item
-     */
-    $menuHtml = '<div class="nav-content">';
-    if ($heading   = array_get($mega, $item->ID . '.heading')) {
-      $menuHtml .= '<div class="nav-content__title">'.$heading.'</div>';
-    }
-    if ($paragraph = array_get($mega, $item->ID . '.paragraph')) {
-      $menuHtml .= '<div class="nav-content__description">'.$paragraph.'</div>';
-    }
-    $menuHtml .= '</div>';
-
-    if (($item->is_dropdown || $isMega) && ($depth === 0)) {
-      $item_html = str_replace('<a', '<a class="dropdown-toggle" 
-          data-toggle="nav-hover"', $item_html);
-
-      $item_html = str_replace('</a>', '</a>' . $menuHtml, $item_html);
-      $item_html = str_replace('</a>', ' <span class="dropdown__caret fa fa-angle-down"></span></a>', $item_html);
+    if ($item->is_dropdown && ($depth === 0)) {
+      $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
+      $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
     }
     elseif (stristr($item_html, 'li class="divider')) {
       $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
