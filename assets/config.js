@@ -29,7 +29,12 @@ var config = {
             asset_path + "vendor/bootstrap/js/*.js",
             asset_path + 'vendor/modernizr/js/modernizr.js',
             asset_path + "vendor/*/js/*.js",
-        ]
+        ],
+        combine_js : [
+            asset_path + "js/dist/vendor.min.js",
+            asset_path + "js/dist/main.min.js",
+        ],
+        
     },
     uglify : {
         app : [

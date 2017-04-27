@@ -45,6 +45,13 @@ solid
     .watch()
     .to('js/dist/')
 
+solid
+    .concat('combine_js')
+    .as('packed.min.js')
+    .message('Scripts Packed')
+    .watch()
+    .to('js/dist/')
+
 //
 // Group tasks
 // -------------------------
@@ -53,4 +60,11 @@ solid.task('default', [
     // 'css.vendor', 
     'uglify.app', 
     // 'concat.vendor'
-])
+    //'concat.combine_js',
+], function()
+{
+    function randVersion(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    require('fs').writeFileSync('assets/version.json', '{ "version": '+ randVersion(1001, 50000) +' }');
+})
