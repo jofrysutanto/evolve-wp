@@ -20,13 +20,13 @@
 		<title><?php wp_title('|', true, 'right'); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="icon" href="<?= TrueLib::getImageURL('favicon.png') ?>">
-		<?php wp_head(); ?>
 		<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 		<script type="text/javascript">
 			window.ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 		</script>
-
 		<!--[if IE 8]>
 		<script type="text/javascript" src="<?= bloginfo('template_url') ?>/assets/vendor/respond.min.js"></script>
         <![endif]-->
+        
+		<?php wp_head(); ?>
 	</head>
