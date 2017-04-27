@@ -7,7 +7,6 @@ var solid = require(solidPath + 'assets/build/solid-gulp');
 solid
     .configure()
     .from(solidPath + 'assets/build/configs/wp.js')
-    // Copy this from build/configs/sample.js
     .from(__dirname + '/assets/config.js')
 
 //
@@ -62,9 +61,7 @@ solid.task('default', [
     'concat.vendor',
     'concat.combine_js',
 ], function() {
-
     solid
         .version()
         .to('version.json')
-        
 });
