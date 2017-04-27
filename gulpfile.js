@@ -1,6 +1,9 @@
 var solidPath = __dirname + '/lib/solid/';
 var solid = require(solidPath + 'assets/build/solid-gulp');
 
+// Polyfill
+require(solidPath + 'assets/build/polyfill');
+
 //
 // Configure solid
 // ----------------------

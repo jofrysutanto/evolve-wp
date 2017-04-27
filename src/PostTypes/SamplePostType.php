@@ -1,5 +1,4 @@
 <?php
-
 namespace App\PostTypes;
 
 use EvolveEngine\Post\AbstractPostType;
