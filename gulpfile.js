@@ -39,8 +39,8 @@ solid
 solid
     .concat('vendor')
     .as('vendor.min.js')
-    .beautify()
-    .sourcemaps()
+    // .beautify()
+    // .sourcemaps()
     .message('Vendor javascript combined')
     .watch()
     .to('js/dist/')
@@ -57,14 +57,14 @@ solid
 // -------------------------
 solid.task('default', [
     'sass.theme', 
-    // 'css.vendor', 
+    'css.vendor', 
     'uglify.app', 
-    // 'concat.vendor'
-    //'concat.combine_js',
-], function()
-{
-    function randVersion(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    require('fs').writeFileSync('assets/version.json', '{ "version": '+ randVersion(1001, 50000) +' }');
-})
+    'concat.vendor',
+    'concat.combine_js',
+], function() {
+
+    solid
+        .version()
+        .to('version.json')
+        
+});
