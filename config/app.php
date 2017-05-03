@@ -142,6 +142,7 @@ return [
         EvolveEngine\Views\ViewServiceProvider::class,
         EvolveEngine\Post\CustomPostTypeProvider::class,
         EvolveEngine\Acf\AcfServiceProvider::class,
+        EvolveEngine\Social\SocialServiceProvider::class,
 
         App\AppServiceProvider::class,
         App\Newsletter\NewsletterServiceProvider::class,
@@ -164,6 +165,7 @@ return [
         'TrueLib'   => EvolveEngine\Utils\Facades\TrueLib::class,
         'PostType'  => EvolveEngine\Post\Facades\PostType::class,
         'AcfHelper' => EvolveEngine\Acf\Facades\Acf::class,
+        'Share'     => EvolveEngine\Social\Facades\Share::class,
 
         'Main'          => App\Facades\Main::class,
         'Newsletter'    => App\Newsletter\Facades\Newsletter::class,
