@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93424bac1cfc6288f391cbdee403afc7",
-    "content-hash": "939674af2f4032ee968d36614a22a680",
+    "hash": "fbc08e927db42da3429d51424a1b2b5d",
+    "content-hash": "7897a4cbe445564c2be1d790b395a50f",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -1218,13 +1218,7 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git",
-                "reference": "46b17ef71bad534c5e7618d5981a6cbf6314ff6d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://bitbucket.org/trueagencyteam/evolve-engine/get/46b17ef71bad534c5e7618d5981a6cbf6314ff6d.zip",
-                "reference": "46b17ef71bad534c5e7618d5981a6cbf6314ff6d",
-                "shasum": ""
+                "reference": "dd47651492608083bd5b4c3a2c988163baf3c7df"
             },
             "require": {
                 "illuminate/config": "5.1.*",
@@ -1260,10 +1254,7 @@
                 "laravel",
                 "wordpress"
             ],
-            "support": {
-                "source": "https://bitbucket.org/trueagencyteam/evolve-engine/src/46b17ef71bad534c5e7618d5981a6cbf6314ff6d/?at=master"
-            },
-            "time": "2017-04-27 03:06:29"
+            "time": "2017-05-03 05:10:48"
         },
         {
             "name": "vlucas/phpdotenv",

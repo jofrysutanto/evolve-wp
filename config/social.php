@@ -14,9 +14,9 @@ return [
     'share' => [
         'default' => [
             // Array of social providers
-            // Valid values are: 'facebook', 'twitter', 'linkedin', 'googleplus'
+            // Valid values are: 'facebook', 'twitter', 'linkedin', 'googleplus', 'email'
             'services' => [
-                'facebook', 'twitter', 'linkedin', 'googleplus'
+                'facebook', 'twitter', 'linkedin', 'googleplus', 'email'
             ],
 
             // Template used to render the share widget,
@@ -24,9 +24,9 @@ return [
             // if string is given, will assume this points to a template file in the theme
             'template' => null,
 
-            // Specify where the shared url will come from
+            // Specify where the shared url and title will come from
             // - null   : Share current page (default behaviour)
-            // - string : Force all share to use the given url. Useful if you only want to share specific url, such as homepage.
+            // - array['url', 'title']  : Force all share to use the given values. Useful if you only want to share specific url, such as homepage.
             'custom_resolver' => null,
         ]
     ]

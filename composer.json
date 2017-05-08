@@ -27,7 +27,7 @@
             "url": "https://wpackagist.org"
         },
         "1": {
-            "type": "vcs",
+            "type": "git",
             "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git"
         }
     },
