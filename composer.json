@@ -27,8 +27,8 @@
             "url": "https://wpackagist.org"
         },
         "1": {
-            "type": "vcs",
-            "url": "https://github.com/true-agency/evolve-engine"
+            "type": "git",
+            "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git"
         }
     },
     "require": {
@@ -40,7 +40,7 @@
         "illuminate/http": "5.1.*",
         "october/router": "^1.0",
         "symfony/var-dumper": "^3.2",
-        "trueagency/evolve-engine": "1.0.*"
+        "trueagency/evolve-engine": "dev-master"
     },
     "autoload": {
         "psr-4": {

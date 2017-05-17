@@ -1,3 +1,4 @@
 !vendor/
 assets/css/*.min.css
 assets/js/dist/*
+version.json

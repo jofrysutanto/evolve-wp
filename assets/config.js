@@ -27,7 +27,7 @@ var config = {
             '!' + asset_path + "vendor/bootstrap/js/carousel.js",
 
             asset_path + "vendor/bootstrap/js/*.js",
-            asset_path + 'vendor/modernizr/js/modernizr.js',
+            asset_path + 'vendor/modernizr.js',
             asset_path + "vendor/*/js/*.js",
         ],
         combine_js : [
@@ -39,10 +39,6 @@ var config = {
     uglify : {
         app : [
             // Exclude some bootstrap javascript we dont use
-            '!' + asset_path + "vendor/bootstrap/js/*.js",
-            '!' + asset_path + "vendor/bootstrap/js/carousel.js",
-            asset_path + 'vendor/modernizr/js/modernizr.js',
-            asset_path + "vendor/*/js/*.js",
             asset_path + "js/true-packed.js",
             asset_path + "js/init.js",
             asset_path + "js/partials/_global.js",

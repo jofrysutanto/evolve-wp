@@ -1,13 +1,15 @@
 var solidPath = __dirname + '/lib/solid/';
 var solid = require(solidPath + 'assets/build/solid-gulp');
 
+// Polyfill
+require(solidPath + 'assets/build/polyfill');
+
 //
 // Configure solid
 // ----------------------
 solid
     .configure()
     .from(solidPath + 'assets/build/configs/wp.js')
-    // Copy this from build/configs/sample.js
     .from(__dirname + '/assets/config.js')
 
 //
@@ -39,8 +41,8 @@ solid
 solid
     .concat('vendor')
     .as('vendor.min.js')
-    .beautify()
-    .sourcemaps()
+    // .beautify()
+    // .sourcemaps()
     .message('Vendor javascript combined')
     .watch()
     .to('js/dist/')
@@ -57,14 +59,12 @@ solid
 // -------------------------
 solid.task('default', [
     'sass.theme', 
-    // 'css.vendor', 
+    'css.vendor', 
     'uglify.app', 
-    // 'concat.vendor'
-    //'concat.combine_js',
-], function()
-{
-    function randVersion(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    require('fs').writeFileSync('assets/version.json', '{ "version": '+ randVersion(1001, 50000) +' }');
-})
+    'concat.vendor',
+    'concat.combine_js',
+], function() {
+    solid
+        .version()
+        .to('version.json')
+});
