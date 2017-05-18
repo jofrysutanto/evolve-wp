@@ -38,7 +38,11 @@ var config = {
     },
     uglify : {
         app : [
-            // Exclude some bootstrap javascript we dont use
+            // Uglify has now been deprecated in favour of babel
+        ]
+    },
+    babel : {
+        app : [
             asset_path + "js/true-packed.js",
             asset_path + "js/init.js",
             asset_path + "js/partials/_global.js",
@@ -47,7 +51,7 @@ var config = {
             asset_path + "js/libraries/foundation.controlutils.js",
             asset_path + "js/libraries/*.js",
             asset_path + "js/routes.js"
-        ],
+        ]
     },
     css : {
         vendor : [

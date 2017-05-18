@@ -30,10 +30,8 @@ solid
     .to('css/')
 
 solid
-    .uglify('app')
+    .babel('app')
     .as('main.min.js')
-    // .beautify()
-    // .sourcemaps()
     .message('Application Javascript compiled')
     .watch()
     .to('js/dist/')
@@ -60,7 +58,7 @@ solid
 solid.task('default', [
     'sass.theme', 
     'css.vendor', 
-    'uglify.app', 
+    'babel.app', 
     'concat.vendor',
     'concat.combine_js',
 ], function() {
