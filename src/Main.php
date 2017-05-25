@@ -61,6 +61,15 @@ class Main extends WordpressBase
         remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
     }
 
+    public function disableEmbed()
+    {
+        if (!is_admin()) {
+            wp_deregister_script('wp-embed');
+        }
+    }
+
+
+
     /**
      * Disable Contact Form 7 asset
      *
