@@ -143,7 +143,8 @@ return [
         EvolveEngine\Post\CustomPostTypeProvider::class,
         EvolveEngine\Acf\AcfServiceProvider::class,
         EvolveEngine\Social\SocialServiceProvider::class,
-
+        EvolveEngine\Analytics\AnalyticsServiceProvider::class,
+        
         App\AppServiceProvider::class,
         App\Newsletter\NewsletterServiceProvider::class,
     ],
@@ -166,6 +167,7 @@ return [
         'PostType'  => EvolveEngine\Post\Facades\PostType::class,
         'AcfHelper' => EvolveEngine\Acf\Facades\Acf::class,
         'Share'     => EvolveEngine\Social\Facades\Share::class,
+        'Analytics' => EvolveEngine\Analytics\Facades\Analytics::class,
 
         'Main'          => App\Facades\Main::class,
         'Newsletter'    => App\Newsletter\Facades\Newsletter::class,
