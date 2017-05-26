@@ -28,11 +28,5 @@
 		<script type="text/javascript" src="<?= bloginfo('template_url') ?>/assets/vendor/respond.min.js"></script>
         <![endif]-->
 
-		<?php
-			if(env('WP_ENV', false) == 'production') {
-				echo Analytics::render('google-tag-manager');
-			}
-		?>
-
 		<?php wp_head(); ?>
 	</head>

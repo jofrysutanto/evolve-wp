@@ -18,5 +18,4 @@ class AppServiceProvider extends WordpressServiceProvider
         'ajax-handlers' => AjaxHandlers::class,
         'acf-main'      => AcfMain::class
     ];
-
 }

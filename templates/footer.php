@@ -1,12 +1,6 @@
 <?php wp_footer(); ?>
 
 <?php
-	if(env('WP_ENV', false) == 'production') {
-		echo Analytics::render('google-analytics');
-	}
-?>
-
-<?php
    if(env('LIVERELOAD', false)):
        ?>
        <script>document.write('<script src="http://'
