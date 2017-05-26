@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4ea5dd29ed4079f2e4ccda2d27e98c6d",
+    "hash": "fbc08e927db42da3429d51424a1b2b5d",
     "content-hash": "7897a4cbe445564c2be1d790b395a50f",
     "packages": [
         {
@@ -1218,7 +1218,7 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git",
-                "reference": "7ccd9f4cc488b7ab4de6f8bfdd5aa2d8715e5a00"
+                "reference": "8a2eb1dbf8a0748d0e46ed9bf129213a637da884"
             },
             "require": {
                 "illuminate/config": "5.1.*",
@@ -1254,7 +1254,7 @@
                 "laravel",
                 "wordpress"
             ],
-            "time": "2017-05-19 03:03:06"
+            "time": "2017-05-25 07:26:57"
         },
         {
             "name": "vlucas/phpdotenv",
