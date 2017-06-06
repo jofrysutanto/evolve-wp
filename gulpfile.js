@@ -59,10 +59,10 @@ solid.task('default', [
     'sass.theme', 
     'css.vendor', 
     'babel.app', 
-    'concat.vendor',
-    'concat.combine_js',
+    'concat.vendor'
 ], function() {
     solid
         .version()
         .to('version.json')
+    solid.start('concat.combine_js')
 });
