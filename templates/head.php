@@ -9,7 +9,7 @@
 <html class="no-js ie ie9" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8) | !(IE 9)  ]><!-->
 <html class="no-js" <?php language_attributes(); ?>>
