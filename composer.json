@@ -2,7 +2,7 @@
     "name": "trueagency/evo",
     "type": "project",
     "license": "MIT",
-    "description": "Modern, opinionated, WordPress boilerplate based on Roots.io",
+    "description": "Modern, opinionated, Laravel-inspired WordPress theme boilerplate",
     "homepage": "https://trueagency.com.au",
     "authors": [
         {

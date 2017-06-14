@@ -29,16 +29,11 @@ class Main extends WordpressBase
         // ==
 
         // Contact Form 7
-        $this->filter( 'wpcf7_load_js', 'cf7Js' );
+        $this->filter( 'wpcf7_load_js',  'cf7Js' );
         $this->filter( 'wpcf7_load_css', 'cf7Css' );
 
         // Page speed optimisations
         $this->filter('script_loader_tag', 'addAsyncToScripts', 10, 2);
-
-        //
-        // Ajax
-        // ==
-        // Moved to its own class
     }
 
     //
@@ -61,6 +56,11 @@ class Main extends WordpressBase
         remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
     }
 
+    /**
+     * Disable built-in media embed scripts
+     *
+     * @return void
+     */
     public function disableEmbed()
     {
         if (!is_admin()) {
@@ -68,10 +68,8 @@ class Main extends WordpressBase
         }
     }
 
-
-
     /**
-     * Disable Contact Form 7 asset
+     * Disable Contact Form 7 stylesheet
      *
      * @return boolean
      */
@@ -81,7 +79,9 @@ class Main extends WordpressBase
     }
 
     /**
-     * Disable Contact Form 7 asset
+     * Disable Contact Form 7 javascript
+     * Ideally this is only enabled on pages which requires contact form
+     * and not on front_page to optimise home page
      *
      * @return boolean
      */

@@ -18,6 +18,6 @@ class AjaxHandlers extends WordpressBase
         //
         // Ajax
         // ==
-        $this->ajax('newsletter_subscribe', 'ajaxNewsletterSubscribe');
+        // $this->ajax('ajax_action_name', 'ajaxMethod');
     }
 }
