@@ -23,10 +23,6 @@
     },
     "repositories": {
         "0": {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        },
-        "1": {
             "type": "git",
             "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git"
         }
