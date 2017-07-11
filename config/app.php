@@ -144,7 +144,18 @@ return [
         EvolveEngine\Acf\AcfServiceProvider::class,
         EvolveEngine\Social\SocialServiceProvider::class,
         EvolveEngine\Analytics\AnalyticsServiceProvider::class,
-        
+
+        /*
+        |--------------------------------------------------------------------------
+        | Optional Service Providers
+        |--------------------------------------------------------------------------
+        |
+        | These providers are optional and generally a case-by-case inclusion
+        | pick only the ones that's actually required for your site.
+        |
+        */
+        // EvolveEngine\Queue\QueueServiceProvider::class,
+
         App\AppServiceProvider::class,
         App\Newsletter\NewsletterServiceProvider::class,
     ],

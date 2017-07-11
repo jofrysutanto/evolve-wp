@@ -36,7 +36,9 @@
         "illuminate/http": "5.1.*",
         "october/router": "^1.0",
         "symfony/var-dumper": "^3.2",
-        "trueagency/evolve-engine": "dev-master"
+        "trueagency/evolve-engine": "dev-master",
+        "filp/whoops": "^2.1",
+        "symfony/console": "^3.3"
     },
     "autoload": {
         "psr-4": {
