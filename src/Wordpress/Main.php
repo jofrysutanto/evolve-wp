@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Wordpress;
 
 use Illuminate\Support\Fluent;
 use EvolveEngine\Core\WordpressBase;

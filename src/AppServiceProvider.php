@@ -14,8 +14,8 @@ class AppServiceProvider extends WordpressServiceProvider
      * @var array  Assoc array of container alias and class name
      */
     protected $logicClasses = [
-        'main'          => Main::class,
-        'ajax-handlers' => AjaxHandlers::class,
-        'acf-main'      => AcfMain::class
+        'main'          => Wordpress\Main::class,
+        'ajax-handlers' => Wordpress\AjaxHandlers::class,
+        'acf-main'      => Wordpress\AcfMain::class
     ];
 }

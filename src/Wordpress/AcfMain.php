@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Wordpress;
 use EvolveEngine\Core\WordpressBase;
 
 class AcfMain extends WordpressBase
