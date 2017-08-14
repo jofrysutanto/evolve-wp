@@ -21,24 +21,12 @@
     "config": {
         "secure-http": false
     },
-    "repositories": {
-        "0": {
-            "type": "git",
-            "url": "https://bitbucket.org/trueagencyteam/evolve-engine.git"
-        }
-    },
+    "repositories": [{
+      "type": "composer",
+      "url": "https://packages.trueserver.com.au"
+    }],
     "require": {
-        "php": ">=5.5",
-        "vlucas/phpdotenv": "^2.0.1",
-        "illuminate/support": "5.1.*",
-        "illuminate/container": "5.1.*",
-        "illuminate/config": "5.1.*",
-        "illuminate/http": "5.1.*",
-        "october/router": "^1.0",
-        "symfony/var-dumper": "^3.2",
-        "trueagency/evolve-engine": "dev-master",
-        "filp/whoops": "^2.1",
-        "symfony/console": "^3.3"
+        "trueagency/evolve-engine": "dev-master"
     },
     "autoload": {
         "psr-4": {

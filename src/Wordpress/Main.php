@@ -32,8 +32,6 @@ class Main extends WordpressBase
         $this->filter( 'wpcf7_load_js',  'cf7Js' );
         $this->filter( 'wpcf7_load_css', 'cf7Css' );
 
-        // Page speed optimisations
-        $this->filter('script_loader_tag', 'addAsyncToScripts', 10, 2);
     }
 
     //
@@ -87,23 +85,7 @@ class Main extends WordpressBase
      */
     public function cf7Js()
     {
-        return false;
-    }
-
-    /**
-     * Add 'async' attributes to our scripts
-     * 
-     * @param string $tag    
-     * @param string $handle
-     *
-     * @return void
-     */
-    public function addAsyncToScripts($tag, $handle)
-    {
-        if ( !in_array($handle, ['main_scripts', 'true_packed']) ) {
-            return $tag;
-        }
-        return str_replace( ' src', ' async="async" src', $tag );
+        return true;
     }
     
 }
