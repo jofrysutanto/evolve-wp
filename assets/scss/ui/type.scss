@@ -1,0 +1,88 @@
+.true-wysiwyg-field, .entry-content {
+    
+    // font-family: $font-family-default !important;
+
+    // * {
+    //     font-family: $font-family-default !important;
+    // }
+
+    img {
+        @include img-responsive();
+    }
+
+    table {
+        td {
+            padding:5px;
+        }
+    }
+    
+    ul, ol {
+        li {
+            font-weight: 300;
+            font-size: 1.1em;;
+        }
+    }
+    ul {
+        @extend .list-unstyled;
+        li {
+            position: relative;
+            padding-left: 30px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 6px; height: 6px;
+                background-color: $colour-red;
+                left: 12px; top: 9px;
+            }
+        }
+    }
+
+    //Figure Captions
+    .thumbnail
+    {
+        &.alignleft {
+            margin-right: 30px;
+        }
+    
+        &.alignright {
+            margin-left: 30px;
+        }
+
+        .caption {
+            text-align:center;
+        }
+    }
+
+    blockquote {
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    blockquote p {
+        display: inline;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+   and TrueLib::getWysiwygField()
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }

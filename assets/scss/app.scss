@@ -18,11 +18,7 @@
  */
 @import "bootstrap";
 
-@import "core";
-@import "mixins";
-@import "util/shadows";
-@import "util/float";
-@import "util/animation";
+@import "util/all";
 
 /**
  * ================== Components ==================
@@ -31,7 +27,6 @@
  * e.g. components/footer, components/header
  * 
  */
-@import "hamburgers/hamburgers";
 @import "components/all";
 @import "ui/all";
  
