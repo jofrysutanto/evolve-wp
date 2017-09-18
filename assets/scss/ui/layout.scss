@@ -34,17 +34,22 @@ header.navbar-fixed-top + .wrap {
  * for developers
  * 
  */
-@media all and (min-width: $screen-md-min) {
+@media all and (min-width: 992px) {
     body.admin-bar .navbar-fixed-top { // Fixed navbar adjusted properly
         top: 32px;
     }
 }
-@media (max-width: $screen-sm-max) { // Hide WP Admin bar on tablet
+@media (max-width: 991px) { // Hide WP Admin bar on tablet
     body.admin-bar {
-        margin-top: -46px;
+        margin-top: -32px;
     }
     #wpadminbar {
         display: none;
     }
 }
 
+@media (max-width: 782px) {
+    body.admin-bar {
+        margin-top: -46px;
+    }
+}
