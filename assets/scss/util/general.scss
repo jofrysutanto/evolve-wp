@@ -1,0 +1,51 @@
+/**
+ * Collections of utility classes and WP fixes
+ * Happy coding!
+ *
+ * $author TrueAgency
+ */
+
+
+/**
+ * ================== Navbar Hoverable dropdown ==================
+ * Allow hover for dropdown as well
+ * @see http://stackoverflow.com/questions/19935480/bootstrap-3-how-to-make-head-of-dropdown-link-clickable-in-navbar
+ */
+@media all and (min-width: $screen-md-min) {
+	ul.nav li.dropdown:hover ul.dropdown-menu {
+	   display: block !important; 
+	}
+}
+
+
+/**
+ * ================== Responsive utility classes ==================
+ * 
+ * Makes life easier when doing desktop first.
+ * 
+ */
+@media (max-width: $screen-sm-max) {
+	// Text centered on tablet
+	.text-center-sm {
+		text-align: center !important;
+	}
+	// No float on tablet
+	.pull-none-sm {
+		float: none !important;
+	}
+}
+@media (max-width: $screen-xs-max) {
+	// Text centered on mobile
+	.text-center-xs {
+		text-align: center !important;
+	}
+	// No float on mobile
+	.pull-none-xs {
+		float: none !important;
+	}
+}
+
+
+.container.container--relative {
+    position: relative;
+}
