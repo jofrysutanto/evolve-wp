@@ -61,6 +61,14 @@ class SamplePostType extends AbstractPostType
     protected $supports = ['title'];
 
     /**
+     * Add ACF Tax options, will be accessible using `cpt_{post_type}`
+     * e.g. get_field('banner_image', 'cpt_true_post_type')
+     * 
+     * @var boolean 
+     */
+    public $hasAcfArchive = true;
+
+    /**
      * @var array  List of taxonomy
      */
     protected $tax = [
