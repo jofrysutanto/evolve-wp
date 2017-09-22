@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Wordpress;
 use EvolveEngine\Core\WordpressBase;
 
@@ -17,6 +16,19 @@ class AcfMain extends WordpressBase
      */
     public function init()
     {
+        $this->action('acf/init', 'addGmapKey');
+    }
+
+    /**
+     * Register Google Map API key to prevent map error
+     */
+    public function addGmapKey()
+    {
+        $key = env('GMAP_API_KEY', false);
+        if (!$key) {
+            return;
+        }
+        acf_update_setting('google_api_key', $key);
     }
     
 }
