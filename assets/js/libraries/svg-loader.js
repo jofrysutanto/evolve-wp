@@ -4,12 +4,24 @@
  * Add svg loader animation
  *
  * Data attributes:
+ * - data-template-id="#svgLoader"   - Template to use for svg loader, can be wrapped inside <script></script>
+ * Example:
+ * <script type="template" id="svgLoader">
+ * <svg class="svg-loader" viewBox="25 25 50 50">
+ *     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
+ * </svg>
+ * </script>
+ *
+ * This scripts appends the svg to the element, and add 'is-loading' class, all CSS loading animation on the svg has
+ * to be added separately.
  *
  * JavaScript API:
+ * // Initialise the library
  * $('#someElement').svgLoader()
- *
- * Dependencies:
- * - ....
+ * // Now show element
+ * $('#someElement').svgLoader('show')
+ * // Hiding element
+ * $('#someElement').svgLoader('hide')
  */
 
 +function ($) { "use strict";
@@ -42,7 +54,7 @@
             return;
         }
 
-        var $loader = $(this.template)
+        var $loader = $('<div class="preloader-wrapper">' + this.template + '</div>')
         if (this.options.loaderClass.length) {
             $loader
                 .addClass(this.options.loaderClass);
