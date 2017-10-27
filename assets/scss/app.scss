@@ -4,26 +4,25 @@
  * @author TrueAgency
  */
 
-/**
- * ================== Imports ==================
- */
-
+// We import variables and overrides at the top
+// to make sure these are prioritised over vendor's variables
 @import "variables";
 @import "overrides";
+
+// Next we load vendors
 @import "../vendor/font-awesome/scss/font-awesome";
 @import "../icomoon/style.scss";
-
-/**
- * Include bootstrap files
- */
+// Bootstrap JS/CSS at root path, for per-project customisation
 @import "bootstrap";
-
-@import "util/all";
+// Additional normalisation script for consistent behaviour
+@import "normalise"
 
 /**
- * Include 'normalisation' files
+ * ================ Additional Vendors ==================
+ *
+ * Reserved space for additional vendor registration
  */
-@import "normalise"
+// @import "../vendor/slick/scss/slick.scss"
 
 /**
  * ================== Components ==================
@@ -32,6 +31,7 @@
  * e.g. components/footer, components/header
  * 
  */
+@import "util/all";
 @import "components/all";
 @import "ui/all";
  
