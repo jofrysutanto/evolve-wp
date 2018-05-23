@@ -8,12 +8,12 @@
     <![endif]-->
     <?php
         do_action('get_header');
-        get_template_part('templates/header');
     ?>
+    <?=view('header/header'); ?>
     <main class="main" role="main">
         <?php include roots_template_path(); ?>
     </main><!-- /.main -->
 
-    <?php get_template_part('templates/footer'); ?>
+    <?=view('footer'); ?>
 </body>
 </html>
