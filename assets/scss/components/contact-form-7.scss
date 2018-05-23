@@ -11,7 +11,7 @@ div.wpcf7-response-output {
 
 div.wpcf7-mail-sent-ok {
     border: 0;
-    color: $brand-success;
+    color: $colour-brand-success;
     margin-right: 0; margin-left: 0;
     padding-right: 0; padding-left: 0;
 }
@@ -24,7 +24,7 @@ span.wpcf7-not-valid-tip {
 
 div.wpcf7-mail-sent-ng, div.wpcf7-spam-blocked, div.wpcf7-validation-errors {
     border: 0;
-    color: $brand-danger;
+    color: $colour-brand-danger;
     margin-right: 0; margin-left: 0;
     padding-right: 0; padding-left: 0;
 }

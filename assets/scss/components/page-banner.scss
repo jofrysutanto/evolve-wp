@@ -42,7 +42,7 @@
     }
 }
 
-@media all and (min-width: $screen-md-min) {
+@include media-breakpoint-up(md) {
     body.admin-bar .page-banner {
         height: calc(100vh - 32px);
     }

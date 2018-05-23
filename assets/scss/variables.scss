@@ -4,6 +4,8 @@ $font-family-default: 'Arial';
 // --------------------------------------------------
 $colour-red: #c53539;
 $colour-green: #93c742;
+$colour-brand-success: $colour-green;
+$colour-brand-danger: $colour-red;
 
 $colour-blue: #1eaedd;
 $colour-blue-darker: #169ac5;
@@ -17,3 +19,6 @@ $colour-success: $colour-green;
 $animation-cubic: cubic-bezier(1,.02,.21,.91);
 $animation-cubic-2: cubic-bezier(0.7,0,0.3,1);
 $animation-elastic: cubic-bezier(0.63, 0.62, 0.48, 1.3);
+
+
+$navbar-height: 80px;

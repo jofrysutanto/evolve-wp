@@ -27,6 +27,6 @@
 </style>
 
 <div class="welcome">
-    <img src="<?= asset('img/common/true-logo-footer-black.png') ?>" alt="True" class="center-block img-responsive">
+    <img src="<?= asset('img/common/true-logo-footer-black.png') ?>" alt="True" class="center-block img-fluid">
     <h1>Build awesome site.</h1>
 </div>

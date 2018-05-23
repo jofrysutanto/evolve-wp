@@ -7,7 +7,7 @@
     // }
 
     img {
-        @include img-responsive();
+        @include img-fluid();
     }
 
     table {

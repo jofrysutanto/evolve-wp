@@ -18,7 +18,7 @@ body.error404 {
 	.wrap-icon {
 		font-size: 180px;
 		color: darken($colour-red, 5%);
-		@media (min-width: $screen-md-min) {
+		@include media-breakpoint-up(md) {
 			position: absolute;
 			bottom: -20px; right: 20px;
 		}
@@ -26,14 +26,14 @@ body.error404 {
 
 	.not-found-heading, .not-found-heading > span {
 		font-size: 70px; text-transform: uppercase;
-		font-weight: normal; color: $brand-danger;
+		font-weight: normal; color: $colour-brand-danger;
 	}
 
 	.not-found-heading > span {
 		color: #333;
 	}
 
-	@media (max-width: $screen-xs-max) {
+	@include media-breakpoint-down(xs) {
 		.page-title.title-404, .page-title.title-404 > span {
 			font-size: 70px;
 			text-align: center !important;

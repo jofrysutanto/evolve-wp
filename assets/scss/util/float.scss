@@ -1,5 +1,5 @@
 .float-none-sm {
-    @media (max-width: $screen-sm-max) {
+    @include media-breakpoint-down(sm) {
         float: none !important;
         text-align: center;
     }
