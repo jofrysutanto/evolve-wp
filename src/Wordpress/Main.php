@@ -32,6 +32,8 @@ class Main extends WordpressBase
         $this->filter( 'wpcf7_load_js',  'cf7Js' );
         $this->filter( 'wpcf7_load_css', 'cf7Css' );
 
+        // Login style
+        $this->action('login_head', 'loginStyles');
     }
 
     //
@@ -88,4 +90,26 @@ class Main extends WordpressBase
         return true;
     }
     
+    /**
+     * Login Styles
+     */
+    public function loginStyles()
+    {
+        ?>
+        <style type="text/css">
+            body {
+                position: relative;
+                background-color: #fff;
+                background-position: bottom center;
+                background-repeat: no-repeat;
+            }
+            h1 a {
+                /** Change width and height according to logo */
+                width:324px !important; height:100px !important;
+                background: url('<?= \TrueLib::getImageURL('logoLogin.png')?>') no-repeat center center !important;
+                -webkit-background-size: auto auto !important; background-size: auto auto !important;
+            }
+        </style>
+        <?php
+    }
 }
