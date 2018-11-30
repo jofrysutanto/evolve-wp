@@ -51,7 +51,8 @@ var config = {
             asset_path + "js/libraries/foundation.controlutils.js",
             asset_path + "js/libraries/*.js",
             asset_path + "js/components/**/*.js",
-            asset_path + "js/routes.js"
+            asset_path + "js/routes.js",
+            asset_path + "js/tracking.js"
         ]
     },
     css : {
