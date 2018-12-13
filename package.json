@@ -13,6 +13,7 @@
     "bluebird": "^3.5.0",
     "del": "^0.1.2",
     "extend": "^3.0.0",
+    "event-stream": "3.3.4",
     "gulp": "^3.8.7",
     "node-sass": "^4.9.0",
     "gulp-autoprefixer": "0.0.8",
