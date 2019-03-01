@@ -16,12 +16,7 @@
         }
     }
     
-    ul, ol {
-        li {
-            font-weight: 300;
-            font-size: 1.1em;;
-        }
-    }
+
     ul {
         @extend .list-unstyled;
         li {
@@ -31,7 +26,7 @@
                 content: '';
                 position: absolute;
                 width: 6px; height: 6px;
-                background-color: $colour-red;
+                background-color: #000;
                 left: 12px; top: 9px;
             }
         }
