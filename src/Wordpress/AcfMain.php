@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Wordpress;
+
 use EvolveEngine\Core\WordpressBase;
 
 class AcfMain extends WordpressBase
@@ -7,7 +9,7 @@ class AcfMain extends WordpressBase
     /**
      * Custom ACF hooks and filters
      */
-    
+
     /**
      * Register all custom hooks and filters here
      * Use $this->filter() and $this->action() to register filters and actions.
@@ -20,7 +22,7 @@ class AcfMain extends WordpressBase
     }
 
     /**
-     * Register Google Map API key to prevent map error
+     * Register Google Map API key for 'Map'-type fields
      */
     public function addGmapKey()
     {
@@ -30,5 +32,4 @@ class AcfMain extends WordpressBase
         }
         acf_update_setting('google_api_key', $key);
     }
-    
 }

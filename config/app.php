@@ -135,15 +135,16 @@ return [
     */
 
     'providers' => [
-        EvolveEngine\Router\RouterServiceProvider::class,
-        EvolveEngine\Utils\UtilityProvider::class,
-        EvolveEngine\Theme\ThemeProvider::class,
-        EvolveEngine\Sentinel\SentinelServiceProvider::class,
-        EvolveEngine\Views\ViewServiceProvider::class,
-        EvolveEngine\Post\CustomPostTypeProvider::class,
         EvolveEngine\Acf\AcfServiceProvider::class,
+        // EvolveEngine\Analytics\AnalyticsServiceProvider::class,
+        EvolveEngine\Assets\AssetsServiceProvider::class,
+        EvolveEngine\Post\CustomPostTypeProvider::class,
+        EvolveEngine\Router\RouterServiceProvider::class,
         EvolveEngine\Social\SocialServiceProvider::class,
-        EvolveEngine\Analytics\AnalyticsServiceProvider::class,
+        EvolveEngine\Sentinel\SentinelServiceProvider::class,
+        EvolveEngine\Theme\ThemeProvider::class,
+        EvolveEngine\Utils\UtilityProvider::class,
+        EvolveEngine\Template\TemplateServiceProvider::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -172,6 +173,7 @@ return [
     */
 
     'aliases' => [
+        'App'       => EvolveEngine\Router\Facades\Route::class,
         'Route'     => EvolveEngine\Router\Facades\Route::class,
         'View'      => EvolveEngine\Views\Facades\View::class,
         'TrueLib'   => EvolveEngine\Utils\Facades\TrueLib::class,
