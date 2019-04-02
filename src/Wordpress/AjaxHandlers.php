@@ -2,7 +2,6 @@
 
 namespace App\Wordpress;
 
-use Illuminate\Support\Fluent;
 use EvolveEngine\Core\WordpressBase;
 
 class AjaxHandlers extends WordpressBase

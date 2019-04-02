@@ -1,6 +1,0 @@
-.float-none-sm {
-    @include media-breakpoint-down(sm) {
-        float: none !important;
-        text-align: center;
-    }
-}

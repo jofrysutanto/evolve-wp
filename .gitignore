@@ -1,5 +1,6 @@
 # Cache
 /bootstrap/compiled.php
+.cache-loader/
 
 # Vendor
 # composer.lock
@@ -25,6 +26,7 @@ php-errors.log
 
 # Build system
 node_modules/*
+dist/
 
 # IDE specific
 nbproject

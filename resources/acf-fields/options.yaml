@@ -1,0 +1,45 @@
+title: 'Options'
+key: 'options'
+location:
+  -
+    param: 'options_page'
+    operator: '=='
+    value: 'acf-options-global-options'
+fields:
+  footer:
+    label: 'Footer'
+    type: 'tab'
+  footer_copyright:
+    label: 'Footer Copyright'
+  google_analytics_id:
+    label: 'Google Analytics ID'
+  social_media:
+    label: 'Social Media'
+    type: 'tab'
+  social_accounts:
+    label: 'Social Media Accounts'
+    type: 'repeater'
+    layout: 'table'
+    button_label: 'Add Account'
+    sub_fields:
+      account_type:
+        label: 'Account Type'
+        type: 'select'
+        required: true
+        choices:
+          facebook: 'Facebook'
+          twitter: 'Twitter'
+          google: 'Google +'
+          instagram: 'Instagram'
+      account_url:
+        label: 'Account URL'
+        required: true
+  contact_details:
+    label: 'Contact Details'
+    type: 'tab'
+  contact_phone_number:
+    label: 'Phone Number'
+  contact_email_address:
+    label: 'Email Address'
+
+  

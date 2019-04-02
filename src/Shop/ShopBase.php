@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Shop;
+
 use EvolveEngine\Core\WordpressBase;
 
 class ShopBase extends WordpressBase
@@ -12,12 +14,11 @@ class ShopBase extends WordpressBase
      */
     public function init()
     {
-        add_theme_support( 'woocommerce' );
-        add_filter( 'woocommerce_template_path', function() {
+        add_theme_support('woocommerce');
+        add_filter('woocommerce_template_path', function () {
             return 'templates/woocommerce/';
         });
 
-
-        add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+        add_filter('woocommerce_enqueue_styles', '__return_false');
     }
 }
