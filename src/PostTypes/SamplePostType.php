@@ -51,11 +51,12 @@ class SamplePostType extends AbstractPostType
     protected $menuIcon = null;
 
     /**
-     * @var string  Icon image used in admin backend. This overrides $menuIcon
+     * @var string  Icon image used in admin backend. This overrides $menuIcon.
+     * protected $menuImage = 'trueKeylockWPIcons';
      */
-    protected $menuImage = 'trueKeylockWPIcons';
 
     /**
+     * @see https://codex.wordpress.org/Function_Reference/post_type_supports
      * @var array  List of post type supported Wordpress feature.
      */
     protected $supports = ['title'];
