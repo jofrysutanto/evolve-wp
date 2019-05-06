@@ -9,7 +9,6 @@
     ]
   },
   "publicPath": "/wp-content/themes/true-theme",
-  "devUrl": "http://interative.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
