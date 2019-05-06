@@ -57,11 +57,13 @@ array_map(function ($file) use ($print_error) {
 // Load environment file
 $dotenv = new \Dotenv\Dotenv(__DIR__ . '/..//');
 if (file_exists(__DIR__ . '/../.env')) {
-   $dotenv->load();
+    $dotenv->load();
 }
 
+// Cleaner basepath without relative `../` dots
+$basePath = array_get(pathinfo(__DIR__), 'dirname');
 // Kickstart custom engine
-$engine = new EvolveEngine\Core\Application(ABSPATH . '../../../', __DIR__ . '/..//');
+$engine = new EvolveEngine\Core\Application(ABSPATH, $basePath);
 
 /**
  * Here's what's happening with these hooks:
