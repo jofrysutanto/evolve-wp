@@ -8,7 +8,7 @@ import { dom, library } from '@fortawesome/fontawesome-svg-core'
 // To allow tree-shaking, we only import icons that we actually use in
 // the project, thus reducing the file size of the icons
 import { faWordpressSimple } from '@fortawesome/free-brands-svg-icons'
-import { 
+import {
     faSearch,
 } from '@fortawesome/pro-light-svg-icons'
 

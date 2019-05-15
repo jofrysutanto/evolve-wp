@@ -134,10 +134,12 @@ let webpackConfig = {
         jquery: 'jQuery',
     },
     plugins: [
-        new CleanPlugin([config.paths.dist], {
-            root: config.paths.root,
-            verbose: false,
-        }),
+        // Clean plugin is commented out due to `/dist` being deleted before compilation happen
+        // and causes production/staging site to have missing styles during compilation
+        // new CleanPlugin([config.paths.dist], {
+        //     root: config.paths.root,
+        //     verbose: false,
+        // }),
         /**
      * It would be nice to switch to copy-webpack-plugin, but
      * unfortunately it doesn't provide a reliable way of
@@ -157,7 +159,7 @@ let webpackConfig = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-            Popper: 'popper.js/dist/umd/popper.js',
+            // Popper: 'popper.js/dist/umd/popper.js',
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: config.enabled.optimize,
