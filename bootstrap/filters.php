@@ -20,11 +20,24 @@ add_filter('body_class', function (array $classes) {
 
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
-        return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
+        $val = preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
+        return $val;
     }, $classes);
 
+    /** Clean up addtional known classes */
+    $classes = array_filter(
+        $classes,
+        function ($value) {
+            return
+                // Remove page id values
+                // developeres should avoid coding with magic ID number
+                (strpos($value, 'page-id') === false)
+                && (strpos($value, 'pageid') === false);
+        }
+    );
+
     return array_filter($classes);
-});
+}, 10);
 
 /**
  * Add "… Continued" to the excerpt
@@ -61,7 +74,7 @@ add_filter('template_include', function ($template) {
     }, []);
     if ($template) {
         echo template($template, $data);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
     return $template;
 }, PHP_INT_MAX);
@@ -84,12 +97,18 @@ add_filter('comments_template', function ($comments_template) {
 
     if ($theme_template) {
         echo template($theme_template, $data);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
 
     return $comments_template;
 }, 100);
 
-add_filter('sober/controller/sage/namespace', function ($default) {
+// Fix our namespace
+add_filter('sober/controller/sage/namespace', function () {
     return '';
+});
+
+// Ensure all ACF are returned as array
+add_filter('sober/controller/acf/array', function () {
+    return true;
 });
