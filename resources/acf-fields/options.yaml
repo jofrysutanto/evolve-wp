@@ -2,17 +2,16 @@ title: 'Options'
 key: 'options'
 location:
   -
-    param: 'options_page'
-    operator: '=='
-    value: 'acf-options-global-options'
+    -
+      param: 'options_page'
+      operator: '=='
+      value: 'acf-options-global-options'
 fields:
   footer:
     label: 'Footer'
     type: 'tab'
   footer_copyright:
     label: 'Footer Copyright'
-  google_analytics_id:
-    label: 'Google Analytics ID'
   social_media:
     label: 'Social Media'
     type: 'tab'
@@ -41,5 +40,3 @@ fields:
     label: 'Phone Number'
   contact_email_address:
     label: 'Email Address'
-
-  
