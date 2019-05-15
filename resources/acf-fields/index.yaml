@@ -1,2 +1,4 @@
 fields:
   - options.yaml
+pages:
+  - page-home.yaml

@@ -1,0 +1,12 @@
+title: 'Page - Home'
+key: 'page_home'
+position: 'acf_after_title'
+hide_on_screen:
+  - 'the_content'
+location:
+  -
+    -
+      param: 'page_template'
+      operator: '=='
+      value: 'views/page-home.blade.php'
+fields:
