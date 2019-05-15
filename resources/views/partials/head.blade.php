@@ -7,5 +7,6 @@
 
   <script type="text/javascript">
     window.ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+    window.jsonurl = '{{ rest_url() }}';
   </script>
 </head>
