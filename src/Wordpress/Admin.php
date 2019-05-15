@@ -18,6 +18,7 @@ class Admin extends WordpressBase
         // ==
         $this->action('login_head', ['addFavIcon', 'loginStyles'], 99);
         $this->action('admin_head', 'addFavIcon');
+        $this->action('admin_init', 'activateAcf');
 
         //
         // Filters
@@ -47,5 +48,22 @@ class Admin extends WordpressBase
     {
         $url = asset_path('images/brand/favicon.png');
         echo sprintf('<link rel="shortcut icon" href="%s" />', $url);
+    }
+
+    /**
+     * Activates ACF license if NOT already activated
+     *
+     * @return void
+     */
+    public function activateAcf()
+    {
+        if (
+            function_exists('acf') &&
+            is_admin() &&
+            !acf_pro_get_license_key() &&
+            env('ACF_PRO_LICENSE')
+        ) {
+            acf_pro_update_license(env('ACF_PRO_LICENSE'));
+        }
     }
 }
