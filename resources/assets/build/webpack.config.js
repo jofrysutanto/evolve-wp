@@ -134,12 +134,6 @@ let webpackConfig = {
         jquery: 'jQuery',
     },
     plugins: [
-        // Clean plugin is commented out due to `/dist` being deleted before compilation happen
-        // and causes production/staging site to have missing styles during compilation
-        // new CleanPlugin([config.paths.dist], {
-        //     root: config.paths.root,
-        //     verbose: false,
-        // }),
         /**
      * It would be nice to switch to copy-webpack-plugin, but
      * unfortunately it doesn't provide a reliable way of
@@ -214,6 +208,12 @@ if (config.enabled.cacheBusting) {
 if (config.enabled.watcher) {
     webpackConfig.entry = require('./util/addHotMiddleware')(webpackConfig.entry);
     webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));
+    // Clean plugin is disabled on 'build' mode due to `/dist` being deleted before compilation happen
+    // and causes production/staging site to have missing styles during compilation
+    webpackConfig.plugins.push(new CleanPlugin([config.paths.dist], {
+      root: config.paths.root,
+      verbose: false,
+    }));
 }
 
 /**
