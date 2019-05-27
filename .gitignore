@@ -23,6 +23,7 @@ nginx-access.log
 nginx-ssl.access.log
 nginx-ssl.error.log
 php-errors.log
+yarn-error.log
 
 # Build system
 node_modules/*

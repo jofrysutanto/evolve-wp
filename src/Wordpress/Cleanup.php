@@ -27,6 +27,7 @@ class Cleanup extends WordpressBase
         //
         // Filters
         // ==
+        $this->filter('wp_revisions_to_keep', 'limitRevisions', 10, 2);
         // Contact Form 7, only load these on pages which requires them
         $this->filter('wpcf7_load_js', 'cf7Js');
         $this->filter('wpcf7_load_css', 'cf7Css');
@@ -97,6 +98,23 @@ class Cleanup extends WordpressBase
             return false;
         }
         return true;
+    }
+
+    /**
+     * Limit number of revisions stored by Wordpress
+     * @see https://wordpress.org/support/article/revisions/#revision-options
+     *
+     * @param integer $count
+     * @param Post $post Use this variable to limit revisions for certain post_type
+     * @return integer|false
+     */
+    public function limitRevisions($count, $post)
+    {
+        $config = config('theme.limit_revision');
+        if (is_null($config)) {
+            return $count;
+        }
+        return $config;
     }
 
     /**
