@@ -11,8 +11,8 @@ return [
     |
     */
     'services' => [
-		'google-analytics'   => explode(',', env('GA', '')),
-		'google-tag-manager' => explode(',', env('GTM', ''))
+        'google-tag-manager' => explode(',', env('GTM', '')),
+        // 'google-analytics'   => explode(',', env('GA', '')),
     ],
 
     /*
@@ -20,13 +20,15 @@ return [
     | Inject
     |--------------------------------------------
     |
-    | This value configures the service script to be 
+    | This value configures the service script to be
     | injected into which section.
     |
     */
     'inject' => [
-		'head'   => ['google-tag-manager'],
-		'footer' => ['google-analytics']
+        'head'   => ['google-tag-manager'],
+        'footer' => [
+            // 'google-analytics'
+        ]
     ],
 
     /*
@@ -35,7 +37,8 @@ return [
     |--------------------------------------------
     |
     | This value determines the environment for analytics to be injected.
+    | You may provide a single value, or array of environments
     |
     */
-    'environment' => 'production'
+    'environment' => ['production']
 ];

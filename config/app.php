@@ -136,7 +136,7 @@ return [
 
     'providers' => [
         EvolveEngine\Acf\AcfServiceProvider::class,
-        // EvolveEngine\Analytics\AnalyticsServiceProvider::class,
+        EvolveEngine\Analytics\AnalyticsServiceProvider::class,
         EvolveEngine\Assets\AssetsServiceProvider::class,
         EvolveEngine\Post\CustomPostTypeProvider::class,
         EvolveEngine\Router\RouterServiceProvider::class,
