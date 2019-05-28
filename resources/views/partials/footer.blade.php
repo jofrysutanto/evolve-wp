@@ -1,5 +1,7 @@
 <footer class="content-info">
   <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
+    <div class="text-right">
+      @include('partials.footer-agency')
+    </div>
   </div>
 </footer>
