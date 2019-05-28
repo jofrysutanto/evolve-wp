@@ -4,9 +4,9 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const webpackDashboard = require('webpack-dashboard/plugin');
 
 const desire = require('./util/desire');
 const config = require('./config');
@@ -134,11 +134,11 @@ let webpackConfig = {
         jquery: 'jQuery',
     },
     plugins: [
-        /**
-     * It would be nice to switch to copy-webpack-plugin, but
-     * unfortunately it doesn't provide a reliable way of
-     * tracking the before/after file names
-     */
+      /**
+       * It would be nice to switch to copy-webpack-plugin, but
+       * unfortunately it doesn't provide a reliable way of
+       * tracking the before/after file names
+       */
         new CopyGlobsPlugin({
             pattern: config.copy,
             output: `[path]${assetsFilenames}.[ext]`,
@@ -214,6 +214,7 @@ if (config.enabled.watcher) {
       root: config.paths.root,
       verbose: false,
     }));
+    webpackConfig.plugins.push(new webpackDashboard);
 }
 
 /**
