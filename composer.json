@@ -19,7 +19,7 @@
         "wp"
     ],
     "config": {
-        "secure-http": false
+        "secure-http": true
     },
     "repositories": [{
       "type": "composer",
@@ -27,7 +27,8 @@
     }],
     "require": {
         "php": ">=7.1.3",
-        "trueagency/evolve-engine": "~2.0.0"
+        "trueagency/evolve-engine": "~2.0.0",
+        "trueagency/evolve-sentinel": "dev-master"
     },
     "autoload": {
         "psr-4": {
