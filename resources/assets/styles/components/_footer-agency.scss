@@ -16,7 +16,7 @@
       transform 0.3s ease,
       opacity 0.18s linear;
   }
-  &__website {
+  &__text {
     font-size: 14px;
     font-weight: bold;
     padding: 0.4em 0;
@@ -27,16 +27,16 @@
     opacity: 0;
     transform: translate3d(0, -32px, 0);
   }
-  &__link:hover &__website {
+  &__link:hover &__text {
     transform: translate3d(0, 0, 0);
   }
   &--theme-white & {
-    &__website {
+    &__text {
       color: #fff;
     }
   }
   &--theme-dark & {
-    &__website {
+    &__text {
       color: #111;
     }
   }

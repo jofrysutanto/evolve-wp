@@ -1,5 +1,9 @@
 'use strict'; // eslint-disable-line
 
+// Configure dotenv as early as possible
+const dotenv = require('dotenv');
+dotenv.config();
+
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');

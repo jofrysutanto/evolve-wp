@@ -31,9 +31,10 @@ class App extends Controller
         ];
         $theme = env('TRUE_LOGO') === 'white' ? 'white' : 'dark';
         $siteUrl = 'https://trueagency.com.au?' . http_build_query($params);
+        $label = 'digital agency melbourne';
         return new Fluent([
-            'label'      => 'trueagency.com.au',
-            'link_title' => 'Web Design Melbourne',
+            'label'      => $label,
+            'link_title' => 'Digital Agency Melbourne',
             'url'        => $siteUrl,
             'theme'      => $theme,
             'logo'       => $theme === 'white'

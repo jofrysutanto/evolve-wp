@@ -2,10 +2,7 @@ const url = require('url');
 const webpack = require('webpack');
 const BrowserSyncPlugin = require('browsersync-webpack-plugin');
 
-const dotenv = require('dotenv');
 const config = require('./config');
-dotenv.config();
-
 const target = process.env.APP_URL || config.devUrl;
 
 /**
