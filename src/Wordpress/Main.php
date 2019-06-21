@@ -26,6 +26,9 @@ class Main extends WordpressBase
         // Filters
         // ==
         // Add your filters here
+
+        // Disable xmlrpc by default
+        add_filter('xmlrpc_enabled', '__return_false');
     }
 
     //
