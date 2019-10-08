@@ -10,7 +10,7 @@ class SamplePostType extends AbstractPostType
      * Create new post type, by extending from AbstractPostType
      * and register them as part of config/post-types
      */
-    
+
     /**
      * @var string  The unique key of the custom post type
      */
@@ -64,8 +64,20 @@ class SamplePostType extends AbstractPostType
     /**
      * Add ACF Tax options, will be accessible using `cpt_{post_type}`
      * e.g. get_field('banner_image', 'cpt_true_post_type')
-     * 
-     * @var boolean 
+     * When creating new ACF yaml file, you may use: `{post_type}-archive`
+     * ```
+     * title: 'Archive - My Post Type'
+     * key: 'archive_{post_type}'
+     * location:
+     *   -
+     *     -
+     *       param: 'options_page'
+     *       operator: '=='
+     *       value: '{post_type}-archive'
+     * fields:
+     * ```
+     *
+     * @var boolean
      */
     public $hasAcfArchive = true;
 
@@ -77,7 +89,7 @@ class SamplePostType extends AbstractPostType
             'slug'   => 'cpts',
             'single' => 'Category',
             'plural' => 'Categories',
-        ]  
+        ]
     ];
 
 }
