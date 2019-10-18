@@ -141,7 +141,6 @@ return [
         EvolveEngine\Post\CustomPostTypeProvider::class,
         EvolveEngine\Router\RouterServiceProvider::class,
         EvolveEngine\Social\SocialServiceProvider::class,
-        EvolveEngine\Sentinel\SentinelServiceProvider::class,
         EvolveEngine\Theme\ThemeProvider::class,
         EvolveEngine\Utils\UtilityProvider::class,
         EvolveEngine\Template\TemplateServiceProvider::class,
