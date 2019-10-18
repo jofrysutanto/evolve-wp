@@ -158,6 +158,7 @@ return [
 
         App\AppServiceProvider::class,
         App\Newsletter\NewsletterServiceProvider::class,
+        App\SocialFeed\SocialFeedServiceProvider::class,
     ],
 
     /*
