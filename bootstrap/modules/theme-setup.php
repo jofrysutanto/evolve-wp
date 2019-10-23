@@ -25,7 +25,6 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'user_journey'       => __('User Journey', 'sage')
     ]);
 
     /**
