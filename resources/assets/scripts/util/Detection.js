@@ -21,7 +21,7 @@ export default class {
       }
       this.flags[toTest] = result
       if (result === true) {
-        this.target.className += ' ' + toTest;
+        this.target.classList.add(toTest)
       }
     })
   }
