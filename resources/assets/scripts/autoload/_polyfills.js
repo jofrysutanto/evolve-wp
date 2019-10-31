@@ -41,7 +41,7 @@
           Object.defineProperty(this, 'defaultPrevented', {
             get: function() {
               return true;
-            }
+            },
           });
         } catch (e) {
           this.defaultPrevented = true;
