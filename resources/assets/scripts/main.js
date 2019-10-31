@@ -5,10 +5,15 @@ import 'jquery';
 import './autoload/**/*'
 
 // import local dependencies
+import Detection from './util/Detection';
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+
+// Detect browser supports
+window._detect = new Detection({ detect: ['ie11', 'edge']});
+window._detect.init()
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
