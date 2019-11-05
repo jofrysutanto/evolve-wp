@@ -6,7 +6,7 @@
   <link rel="icon" href="@asset('images/brand/favicon.png')">
 
   <script type="text/javascript">
-    window.ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+    window.ajaxurl = '{{ admin_url('admin-ajax.php') }}';
     window.jsonurl = '{{ rest_url() }}';
   </script>
 </head>

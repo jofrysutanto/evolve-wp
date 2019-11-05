@@ -1,4 +1,7 @@
-// import external dependencies
+// Import polyfills for older browsers
+import "./_polyfills";
+
+// Import external dependencies
 import 'jquery';
 
 // Import everything from autoload
@@ -12,6 +15,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 // Detect browser supports
+// which adds special css class to body
 window._detect = new Detection({ detect: ['ie11', 'edge']});
 window._detect.init()
 

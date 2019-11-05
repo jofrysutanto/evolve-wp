@@ -20,5 +20,6 @@ class AppServiceProvider extends WordpressServiceProvider
         // Your customer logic providers
         'main'           => Wordpress\Main::class,
         'ajax-handlers'  => Wordpress\AjaxHandlers::class,
+        'api-handlers'   => Wordpress\ApiHandlers::class,
     ];
 }
