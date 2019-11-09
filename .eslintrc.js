@@ -12,6 +12,7 @@ module.exports = {
     'jquery': true,
   },
   'parserOptions': {
+    'parser': 'babel-eslint',
     'ecmaFeatures': {
       'globalReturn': true,
       'generators': false,

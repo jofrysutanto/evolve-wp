@@ -31,6 +31,8 @@ class Cleanup extends WordpressBase
         // Contact Form 7, only load these on pages which requires them
         $this->filter('wpcf7_load_js', 'cf7Js');
         $this->filter('wpcf7_load_css', 'cf7Css');
+        // Remove auto line-breaks
+        add_filter('wpcf7_autop_or_not', '__return_false');
     }
 
     //
