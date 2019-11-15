@@ -5,7 +5,7 @@
   "repository": "bitbucket:trueagency/true-theme",
   "license": "PRIVATE",
   "engines": {
-    "node": ">= 8.0.0 <= 10.15.3"
+    "node": ">= 8.0.0 <= 11.*"
   },
   "browserslist": [
     "last 2 versions"
@@ -14,7 +14,7 @@
     "build": "webpack --progress --config resources/assets/build/webpack.config.js",
     "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js > stats.json",
-    "start": "webpack-dashboard -m -- webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
+    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
@@ -51,7 +51,6 @@
     "url-loader": "^0.6.2",
     "webpack": "~3.10.0",
     "webpack-assets-manifest": "^1.0.0",
-    "webpack-dashboard": "^3.0.7",
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.22.3",
     "webpack-merge": "~4.1.4",
