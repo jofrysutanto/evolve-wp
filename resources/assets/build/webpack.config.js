@@ -10,7 +10,6 @@ const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const webpackDashboard = require('webpack-dashboard/plugin');
 
 const desire = require('./util/desire');
 const config = require('./config');
@@ -219,7 +218,6 @@ if (config.enabled.watcher) {
       root: config.paths.root,
       verbose: false,
     }));
-    webpackConfig.plugins.push(new webpackDashboard);
 }
 
 /**
