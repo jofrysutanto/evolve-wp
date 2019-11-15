@@ -18,6 +18,10 @@
       padding-bottom: 0;
       border: 0;
   }
+  .login .button.wp-hide-pw {
+    top: 6px;
+    right: 3px;
+  }
   .login form#loginform label[for="user_login"],
   .login form#loginform label[for="user_pass"] {
       font-size: 11px;
