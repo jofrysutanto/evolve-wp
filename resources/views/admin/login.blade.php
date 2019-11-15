@@ -16,6 +16,7 @@
       background-color: transparent;
       box-shadow: none;
       padding-bottom: 0;
+      border: 0;
   }
   .login form#loginform label[for="user_login"],
   .login form#loginform label[for="user_pass"] {
