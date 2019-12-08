@@ -21,3 +21,5 @@ library.add(
 
 // Initialise the SVG replacement
 dom.i2svg()
+// Observe DOM changes
+dom.watch()
