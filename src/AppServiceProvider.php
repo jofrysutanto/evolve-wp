@@ -17,7 +17,7 @@ class AppServiceProvider extends WordpressServiceProvider
         'admin-override' => Wordpress\Admin::class,
         'acf-main'       => Wordpress\AcfMain::class,
 
-        // Your customer logic providers
+        // Your custom logic providers
         'main'           => Wordpress\Main::class,
         'ajax-handlers'  => Wordpress\AjaxHandlers::class,
         'api-handlers'   => Wordpress\ApiHandlers::class,
