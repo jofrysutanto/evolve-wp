@@ -2,11 +2,6 @@
 return [
 
     /**
-     * Announcement feed url
-     */
-    'announcement' => 'https://trueagency.com.au/dash-announcement.php',
-
-    /**
      * Wordpress will automatically crop and resize uploaded images to these sizes
      * @link https://codex.wordpress.org/Post_Thumbnails#Thumbnail_Sizes
      */

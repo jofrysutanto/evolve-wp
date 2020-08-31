@@ -18,32 +18,6 @@ class App extends Controller
     }
 
     /**
-     * Retrieve agency's UTM tracking meta information
-     *
-     * @return Fluent
-     */
-    public function utm()
-    {
-        $params = [
-            'utm_source'   => 'client',
-            'utm_campaign' => env('UTM_CAMPAIGN', ''),
-            'utm_medium'   => 'website',
-        ];
-        $theme = env('TRUE_LOGO') === 'white' ? 'white' : 'dark';
-        $siteUrl = 'https://trueagency.com.au?' . http_build_query($params);
-        $label = 'Digital Agency';
-        return new Fluent([
-            'label'      => $label,
-            'link_title' => 'Digital Agency Melbourne',
-            'url'        => $siteUrl,
-            'theme'      => $theme,
-            'logo'       => $theme === 'white'
-                ? asset('images/common/true-logo-white.svg')
-                : asset('images/common/true-logo.svg'),
-        ]);
-    }
-
-    /**
      * Retrieve current page's title
      *
      * @return string

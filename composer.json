@@ -1,13 +1,13 @@
 {
-    "name": "trueagency/evolve-wp",
+    "name": "jofrysutanto/evolve-wp",
     "type": "project",
     "license": "PRIVATE",
     "description": "Modern, opinionated, Laravel-inspired WordPress theme boilerplate",
-    "homepage": "https://trueagency.com.au",
+    "homepage": "https://jofrysutanto.com.au",
     "authors": [
         {
             "name": "Jofry S",
-            "email": "jofry@trueagency.com.au",
+            "email": "jofrysutanto@gmail.com.au",
             "homepage": "https://github.com/jofrysutanto"
         }
     ],
@@ -21,13 +21,9 @@
     "config": {
         "secure-http": false
     },
-    "repositories": [{
-      "type": "composer",
-      "url": "https://packages.trueserver.com.au"
-    }],
     "require": {
         "php": ">=7.1.3",
-        "trueagency/evolve-engine": "~2.1.0"
+        "jofrysutanto/evolve-engine": "~2.1.0"
     },
     "autoload": {
         "psr-4": {
