@@ -3,7 +3,7 @@
 .cache-loader/
 
 # Vendor
-# composer.lock
+composer.lock
 composer.phar
 /vendor
 
