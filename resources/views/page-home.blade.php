@@ -110,14 +110,11 @@
 <div class="welcome">
     <div class="main-wrap" id="mainWrap">
       <h1>{{ $welcome }}</h1>
-      <div class="text-center mt-4">
-          <a href="/trueadmin"
+      <div class="mt-4 text-center">
+          <a href="/wp-admin"
               class="login">
               Login to Wordpress Admin
           </a>
-          <div class="mt-3">
-              <i class="fab fa-wordpress-simple fa-3x" style="opacity: 0.3;"></i>
-          </div>
       </div>
     </div>
 </div>
