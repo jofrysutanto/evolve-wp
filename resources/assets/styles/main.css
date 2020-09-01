@@ -1,0 +1,11 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "./layouts/_fourohfour.css";
+
+@import "./components/_wp-classes.css";
+@import "./components/_lazy-load.css";
+

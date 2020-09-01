@@ -1,18 +1,19 @@
 // Import polyfills for older browsers
 import './_polyfills'
-
-// Import external dependencies
-import 'jquery'
+// Support async/await
+import 'regenerator-runtime/runtime'
 
 // Import everything from autoload
-import './autoload/**/*'
+import './autoload/_lazy-load'
+
+// Styles
+import './../styles/main.css'
 
 // import local dependencies
 import Detection from './util/Detection'
 import Router from './util/Router'
 import common from './routes/common'
 import home from './routes/home'
-import aboutUs from './routes/about'
 
 // Detect browser supports
 // which adds special css class to body
@@ -26,8 +27,13 @@ const routes = new Router({
   // Home page
   home,
   // About Us page, note the change from about-us to aboutUs.
-  aboutUs,
+  // aboutUs,
 })
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents())
+
+// Enable Hot-module-replacement
+if (module && module.hot) {
+  module.hot.accept()
+}

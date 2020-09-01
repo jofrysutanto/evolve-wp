@@ -1,6 +1,6 @@
 # Cache
 /bootstrap/compiled.php
-.cache-loader/
+.cache/
 
 # Vendor
 composer.lock

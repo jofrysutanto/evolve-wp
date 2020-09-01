@@ -1,7 +1,7 @@
 {
     "name": "jofrysutanto/evolve-wp",
     "type": "project",
-    "license": "PRIVATE",
+    "license": "MIT",
     "description": "Modern, opinionated, Laravel-inspired WordPress theme boilerplate",
     "homepage": "https://jofrysutanto.com.au",
     "authors": [
@@ -18,12 +18,9 @@
         "vagrant",
         "wp"
     ],
-    "config": {
-        "secure-http": false
-    },
     "require": {
         "php": ">=7.1.3",
-        "jofrysutanto/evolve-engine": "~2.1.0"
+        "jofrysutanto/evolve-engine": "^2.1"
     },
     "autoload": {
         "psr-4": {

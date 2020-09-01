@@ -1,9 +1,9 @@
 <?php
 
 return [
-    
+
     'types' => [
-        // App\PostTypes\MyPostType::class
+        // App\PostTypes\SamplePostType::class
     ]
 
 ];

@@ -4,67 +4,36 @@
   "version": "1.0.0",
   "license": "PRIVATE",
   "engines": {
-    "node": ">= 11.*"
+    "node": ">= 10.*"
   },
   "browserslist": [
     "last 2 versions"
   ],
   "scripts": {
-    "build": "webpack --progress --config resources/assets/build/webpack.config.js",
-    "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
-    "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js > stats.json",
-    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
-    "test": "npm run -s lint"
+    "hot:start": "rm dist/version.json && touch dist/.hot",
+    "make-version": "touch dist/version.json && node ./resources/assets/build/version.js",
+    "dev": "npm run hot:start && parcel watch resources/assets/scripts/main.js --public-url ./ --https --hmr-hostname localhost",
+    "dev-http": "npm run hot:start && parcel watch resources/assets/scripts/main.js --public-url ./ --hmr-hostname localhost",
+    "build": "npm run rmdist && parcel build resources/assets/scripts/main.js -d dist/ --public-url ./ --no-minify && npm run make-version",
+    "prod": "npm run rmdist && parcel build resources/assets/scripts/main.js -d dist/ --public-url ./ && npm run make-version"
   },
+  "externals": [
+    "jquery => window.jQuery"
+  ],
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.8.1",
-    "babel-eslint": "~10.0.3",
-    "autoprefixer": "~8.2.0",
-    "browser-sync": "~2.24.7",
-    "browsersync-webpack-plugin": "^0.6.0",
-    "bs-html-injector": "~3.0",
-    "buble-loader": "^0.4.1",
-    "cache-loader": "~1.2.5",
-    "clean-webpack-plugin": "^0.1.18",
-    "copy-globs-webpack-plugin": "^0.2.0",
-    "css-loader": "^0.28.9",
-    "cssnano": "~4.0.5",
-    "eslint": "~5.16.0",
-    "eslint-loader": "~1.9",
-    "eslint-plugin-import": "~2.14.0",
-    "extract-text-webpack-plugin": "~3.0.2",
-    "file-loader": "^1.1.6",
-    "friendly-errors-webpack-plugin": "^1.6.1",
-    "import-glob": "~1.5",
-    "postcss-loader": "~2.1.0",
-    "postcss-safe-parser": "~3.0",
-    "resolve-url-loader": "~2.3.1",
-    "rimraf": "~2.6",
-    "sass": "^1.20.1",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.22.1",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "url-loader": "^0.6.2",
-    "webpack": "~3.10.0",
-    "webpack-assets-manifest": "^1.0.0",
-    "webpack-dev-middleware": "~2.0.4",
-    "webpack-hot-middleware": "~2.22.3",
-    "webpack-merge": "~4.1.4",
-    "yargs": "~11.0.0"
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "eslint": "^7.8.0",
+    "eslint-plugin-import": "^2.22.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-externals": "^0.5.1",
+    "postcss": "^7.0.32",
+    "postcss-nested": "^4.2.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/pro-light-svg-icons": "^5.8.1",
-    "@fortawesome/pro-regular-svg-icons": "^5.8.1",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "bootstrap": "v4.3.1",
-    "dotenv": "^7.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.7",
-    "vanilla-lazyload": "^11.0.6"
+    "tailwindcss": "^1.4.6",
+    "vanilla-lazyload": "^17.1.2"
   }
 }

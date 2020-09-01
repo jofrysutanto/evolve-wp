@@ -2,5 +2,5 @@
 </footer>
 
 <?php if (env('WP_ENV', 'local') == 'production'): ?>
-  <!-- Analytics tracking submission goes here -->
+{{-- Analytics tracking submission goes here --}}
 <?php endif; ?>

@@ -55,7 +55,7 @@ array_map(function ($file) use ($print_error) {
 }, ['helpers', 'setup', 'filters', 'admin']);
 
 // Load environment file
-$dotenv = new \Dotenv\Dotenv(__DIR__ . '/..//');
+$dotenv = \Dotenv\Dotenv::create(__DIR__ . '/..//');
 if (file_exists(__DIR__ . '/../.env')) {
     $dotenv->load();
 }

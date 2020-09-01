@@ -1,0 +1,16 @@
+body.error404 {
+    @apply w-screen h-screen bg-cover;
+    background-image: url('./../../images/my-image.jpg');
+}
+.fourohfour {
+    @apply flex items-center h-full pl-48;
+    &__content {
+        @apply p-4;
+    }
+    h1 {
+      @apply my-0 text-5xl;
+    }
+    h2 {
+      @apply mb-4 text-3xl opacity-75;
+    }
+}
